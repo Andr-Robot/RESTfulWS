@@ -10,6 +10,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.json.JSONObject;
 
+// 示例文件
 //这里@Path定义了类的层次路径。 
 //指定了资源类提供服务的URI路径。
 @Path("UserInfoService")
