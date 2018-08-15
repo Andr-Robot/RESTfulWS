@@ -17,11 +17,11 @@ public class QueryService {
 	@Produces(MediaType.APPLICATION_JSON)
 	/**
 	 * 查询所有的表名
-	 * @return  [{"Tables_in_mdatabase":"tianyu_operation_week"},{"Tables_in_mdatabase":"tianyu_operation_week_foreign"},{"Tables_in_mdatabase":"tianyu_operation_week_logon_retention"},{"Tables_in_mdatabase":"tianyu_operation_week_new_retention"}]
+	 * @return  
 	 * @throws Exception
 	 */
 	public String getAllTableName() {
-		String gettablenamesql = "show tables";
+		String gettablenamesql = "select tablename from tablefieldstat group by tablename";
 		DBConnect dbConnect = new DBConnect();
 		String result = null;
 		try {
